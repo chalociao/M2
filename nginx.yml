@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install latest nginx
+      command: amazon-linux-extras install nginx1.12=latest -y
+      args:
+        create: /sbin/nginx
+      become: yes
+
+    - name: Start nginx service
+      service:
+        name: nginx
+        state: started
+
+    - name: Enable nginx service
+      service:
+        name: nginx
+        enabled: yes
+
+    - name: Get nginx installed version
+      command: nginx -v
+
+    - name: Get status of nginx service
+      command: systemctl status nginx
