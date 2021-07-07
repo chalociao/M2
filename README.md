@@ -8,8 +8,7 @@ AWS Infra includes the following:
 6. Security Group
 
 ## IAM Credentials
-Username: pkum5862@hotmail.com
-Password: ;9u~MU8Rw,Q;bk6
+Shared in the email
 
 ## Infra can be provisioned with executing following commands in sequence:
 `terrafrom init`
